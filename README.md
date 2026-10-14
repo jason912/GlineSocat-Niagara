@@ -17,6 +17,59 @@ between TCP and UDP.
 
 ---
 
+## Why this service exists
+
+A JACE already sits **between two networks** — it has a port on the building's
+**enterprise LAN** (where the field devices live) and it is reachable from the
+**integrator's side**. That position makes it the natural place to put a
+*socat-style* relay: use the JACE as a **port-forwarding bridge**, so a device on the
+internal network can be reached and debugged from outside it — **without putting any
+integrator PC onto the enterprise network.**
+
+### The problem it solves
+
+Commissioning and troubleshooting a JACE station usually means talking directly to the
+devices behind it — PLCs, DDCs, controllers, meters. In real projects that is often
+hard or impossible:
+
+| Obstacle | What it means in practice |
+|:--|:--|
+| **No PC on the enterprise LAN** | The integrator's laptop is **not allowed** to join the customer's internal network — it is not managed, not patched, not trusted. |
+| **Devices are physically remote** | The DDC / PLC sits in a plant room, on another floor, or in a different building — a site visit per change is expensive. |
+| **Extra licensing** | The engineering tool may need its own licence (for example a **Spyder** licence) just to open a session to the device. |
+| **No direct route** | The device is on a subnet the integrator has no path to at all. |
+
+### How the JACE solves it
+
+The JACE **does** have a route to those devices. Put a relay component on the JACE and
+it can:
+
+1. **Listen on the JACE** for a port you choose,
+2. **Forward** that port to the internal device (PLC / DDC / any TCP or UDP service),
+3. Let the integrator's PC connect to **the JACE's second network interface** — and
+   reach the internal device **through** the JACE.
+
+The PC never joins the enterprise network, the device never needs to be exposed
+directly, and no per-device licence is needed just to reach it. **`glineSocat` works
+the same way for TCP and UDP**, and can bridge between the two protocols
+(`tcp-udp` / `udp-tcp`) — useful for SNMP, Modbus, and other mixed traffic.
+
+Typical uses:
+
+- **Debug a PLC or DDC** on the internal LAN from the integrator's workstation.
+- **Reach a distant plant room** without sending an engineer to site.
+- **Avoid extra tool licensing** — the relay is a plain socket forward, not an
+  engineering-tool session.
+- **Temporarily expose** a service that has no other route.
+
+### Close the port when you are done
+
+> **Security note.** The relay is an **open port on the JACE** for as long as it runs.
+> Treat a debug relay as a **temporary maintenance window**: when commissioning or
+> troubleshooting is finished, **stop the component or disable the port**, so the
+> internal device is not left reachable. Keep the listening host restricted, and never
+> leave a relay open on a site unattended.
+
 ## What glineSocatV2 does
 
 - Type: **`SocatChannelV2`** (module `glineSocatV2`)
