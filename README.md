@@ -50,7 +50,7 @@ it can:
    reach the internal device **through** the JACE.
 
 The PC never joins the enterprise network, the device never needs to be exposed
-directly, and no per-device licence is needed just to reach it. **`glineSocat` works
+directly, and reaching it needs no separate engineering-tool licence. **`glineSocat` works
 the same way for TCP and UDP**, and can bridge between the two protocols
 (`tcp-udp` / `udp-tcp`) — useful for SNMP, Modbus, and other mixed traffic.
 
@@ -59,17 +59,17 @@ the same way for TCP and UDP**, and can bridge between the two protocols
 This is where the relay pays for itself. Opening a session to a device through an
 engineering tool can require a **separate Spyder licence**, and on a multi-controller
 site those licences add up. With a relay on the JACE, reaching the device is a **plain
-socket forward** — no engineering-tool session, no extra licence. A single **Niagara
-Workbench** on the integrator's PC is enough to reach the internal devices, so
-commissioning cost does not climb with every controller you add.
+socket forward** — no engineering-tool session, no extra licence. The integrator's own
+**Niagara Workbench** is then all that is needed on the PC side, so the cost of
+reaching devices does not climb with every controller you add.
 
 Typical uses:
 
 - **Debug a PLC or DDC** on the internal LAN from the integrator's workstation.
 - **Reach a distant plant room** without sending an engineer to site.
 - **Avoid extra tool licensing** — the relay is a plain socket forward, not an
-  engineering-tool session, so **a Spyder licence is not needed** just to reach the
-  device. One Workbench on the integrator's PC covers the site.
+  engineering-tool session, so **no Spyder licence is needed** merely to reach the
+  device. The integrator's existing Workbench is enough.
 - **Temporarily expose** a service that has no other route.
 
 ### Close the port when you are done
