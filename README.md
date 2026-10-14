@@ -36,7 +36,7 @@ hard or impossible:
 |:--|:--|
 | **No PC on the enterprise LAN** | The integrator's laptop is **not allowed** to join the customer's internal network — it is not managed, not patched, not trusted. |
 | **Devices are physically remote** | The DDC / PLC sits in a plant room, on another floor, or in a different building — a site visit per change is expensive. |
-| **Extra licensing** | The engineering tool may need its own licence (for example a **Spyder** licence) just to open a session to the device — and some vendors expect you to buy that licence **for every JACE**. |
+| **Extra licensing** | The engineering tool may need its own licence (for example a **Spyder** licence) just to open a session to the device. |
 | **No direct route** | The device is on a subnet the integrator has no path to at all. |
 
 ### How the JACE solves it
@@ -54,21 +54,22 @@ directly, and no per-device licence is needed just to reach it. **`glineSocat` w
 the same way for TCP and UDP**, and can bridge between the two protocols
 (`tcp-udp` / `udp-tcp`) — useful for SNMP, Modbus, and other mixed traffic.
 
-### One Workbench instead of a licence per JACE
+### Save on tool licensing
 
-This is where the relay pays for itself. Honeywell (and others) would have you buy a
-**Spyder debug licence for every JACE** on a site, just to open a session through it.
-With a relay on the JACE, reaching the device is a **plain socket forward** — so a
-single **Niagara Workbench** on the integrator's PC is enough. You stop buying a debug
-licence per controller and keep the commissioning cost flat as the site grows.
+This is where the relay pays for itself. Opening a session to a device through an
+engineering tool can require a **separate Spyder licence**, and on a multi-controller
+site those licences add up. With a relay on the JACE, reaching the device is a **plain
+socket forward** — no engineering-tool session, no extra licence. A single **Niagara
+Workbench** on the integrator's PC is enough to reach the internal devices, so
+commissioning cost does not climb with every controller you add.
 
 Typical uses:
 
 - **Debug a PLC or DDC** on the internal LAN from the integrator's workstation.
 - **Reach a distant plant room** without sending an engineer to site.
 - **Avoid extra tool licensing** — the relay is a plain socket forward, not an
-  engineering-tool session. Where a vendor expects a **debug licence on every JACE**
-  (Honeywell / Spyder being the common case), **one Workbench licence is enough**.
+  engineering-tool session, so **a Spyder licence is not needed** just to reach the
+  device. One Workbench on the integrator's PC covers the site.
 - **Temporarily expose** a service that has no other route.
 
 ### Close the port when you are done
