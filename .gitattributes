@@ -1,0 +1,40 @@
+# ---- Line endings: store AND check out text as LF ----
+# Goal: any agent (133 / 104 / 127) or script clones and gets clean LF text,
+# with no CRLF noise. Binary files are left untouched.
+* text=auto eol=lf
+
+# explicit text types
+*.md          text eol=lf
+*.markdown    text eol=lf
+*.txt         text eol=lf
+*.xml         text eol=lf
+*.java        text eol=lf
+*.sh          text eol=lf
+*.palette     text eol=lf
+*.lexicon     text eol=lf
+MANIFEST.MF   text eol=lf
+.gitignore    text eol=lf
+.gitattributes text eol=lf
+
+# Windows-only scripts keep CRLF
+*.bat         text eol=crlf
+*.cmd         text eol=crlf
+
+# ---- Binaries: never convert ----
+*.jar    binary
+*.class  binary
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.ico    binary
+*.pdf    binary
+*.pptx   binary
+*.docx   binary
+*.zip    binary
+*.gz     binary
+*.p12    binary
+*.jks    binary
+*.pem    binary
+*.key    binary
+*.der    binary

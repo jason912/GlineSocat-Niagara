@@ -1,0 +1,16 @@
+# This repository intentionally contains documentation only.
+# Never commit binaries or sources here.
+*.jar
+*.class
+*.java
+*.jks
+*.p12
+*.pem
+*.key
+*.pfx
+*.zip
+*.rar
+*.7z
+node_modules/
+.DS_Store
+Thumbs.db
