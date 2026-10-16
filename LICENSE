@@ -1,0 +1,95 @@
+# glineSocat Relay Family — Commercial License
+
+Copyright © 2026 Shanghai Gline Net Co., Ltd. All rights reserved.
+
+---
+
+## 1. Grant of License
+
+This license agreement ("License") governs the use of the glineSocat / glineRelay software module
+("the Software") developed by Shanghai Gline Net Co., Ltd. ("Licensor").
+
+By installing, copying, or using the Software, you ("Licensee") agree to be bound by the
+terms of this License.
+
+### 1.1 Trial License
+
+The Licensor grants the Licensee a non-exclusive, non-transferable, temporary license to
+use the Software for evaluation purposes only for a period of **30 days** from the date
+of license issuance. Trial licenses may contain feature limitations at the Licensor's
+discretion.
+
+### 1.2 Commercial License
+
+The Licensor grants the Licensee a non-exclusive, non-transferable, perpetual license to
+use the Software on the licensed number of Niagara stations ("Licensed Units") as specified
+in the applicable invoice or purchase order.
+
+### 1.3 Enterprise License
+
+Enterprise licenses are negotiated on a per-customer basis and supersede the terms of
+Section 1.2 where applicable.
+
+---
+
+## 2. License Restrictions
+
+The Licensee shall NOT:
+
+- (a) Distribute, sublicense, rent, lease, or transfer the Software to any third party
+      except as part of a Niagara-based solution deployed for the Licensee's own end users;
+- (b) Reverse engineer, decompile, disassemble, or attempt to derive the source code of
+      the Software;
+- (c) Remove or alter any copyright, trademark, or proprietary notices contained in
+      the Software;
+- (d) Use the Software in a manner that violates applicable laws or regulations.
+
+---
+
+## 3. Intellectual Property
+
+The Software is owned by the Licensor and is protected by copyright laws and international
+treaty provisions. The Licensor retains all right, title, and interest in and to the
+Software, including all intellectual property rights therein.
+
+---
+
+## 4. Warranty Disclaimer
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE, AND NONINFRINGEMENT. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE
+SOFTWARE IS WITH THE LICENSEE.
+
+---
+
+## 5. Limitation of Liability
+
+IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT, OR
+CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING BUT NOT LIMITED TO DAMAGES FOR LOSS OF
+BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION, OR ANY OTHER
+PECUNIARY LOSS) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE.
+
+---
+
+## 6. Termination
+
+This License is effective until terminated. The Licensee may terminate it at any time by
+destroying all copies of the Software. This License will terminate automatically without
+notice if the Licensee fails to comply with any term hereof. Upon termination, the Licensee
+must destroy all copies of the Software.
+
+---
+
+## 7. Governing Law
+
+This License shall be governed by and construed in accordance with the laws of the
+People's Republic of China, without regard to its conflict of laws provisions.
+
+---
+
+## 8. Contact
+
+Shanghai Gline Net Co., Ltd.
+Email: jason.zhang@gline-net.com | WhatsApp: +86 138 0199 0968
+Web: https://www.glineweb.com
